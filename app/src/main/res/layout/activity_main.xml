@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dashboardPageGuideBegin"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_15mdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dashboardPageGuideEnd"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_15mdp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_26font_mdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="Program"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/dashboardPageGuideBegin"
+        android:layout_marginTop="@dimen/_10mdp"
+        />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/dashboardPage_armLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20mdp"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow_dark"
+        app:neumorph_shadowColorLight="@color/shadow_light"
+        app:neumorph_shadowElevation="@dimen/_5mdp"
+        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+        tools:ignore="missingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:src="@drawable/arm_training"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="Arm\ntraining"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12font_mdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="In progress.."
+                android:textColor="@color/musicPrimary_text"
+                android:textSize="@dimen/_10font_mdp" />
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/dashboardPage_weightLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20mdp"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow_dark"
+        app:neumorph_shadowColorLight="@color/shadow_light"
+        app:neumorph_shadowElevation="@dimen/_5mdp"
+        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+        tools:ignore="missingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:src="@drawable/dumbbell"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="Weight\ntraining"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12font_mdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="Have finished"
+                android:textColor="@color/musicPrimary_text"
+                android:textSize="@dimen/_10font_mdp" />
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/dashboardPage_runLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20mdp"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow_dark"
+        app:neumorph_shadowColorLight="@color/shadow_light"
+        app:neumorph_shadowElevation="@dimen/_5mdp"
+        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+        tools:ignore="missingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:src="@drawable/run"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="Run\ntraining"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12font_mdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="In progress.."
+                android:textColor="@color/musicPrimary_text"
+                android:textSize="@dimen/_10font_mdp" />
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/dashboardPage_yogaLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_20mdp"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/shadow_dark"
+        app:neumorph_shadowColorLight="@color/shadow_light"
+        app:neumorph_shadowElevation="@dimen/_5mdp"
+        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+        tools:ignore="missingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:src="@drawable/yoga"
+                app:tint="@color/primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="Yoga\ntraining"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12font_mdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="No task"
+                android:textColor="@color/musicPrimary_text"
+                android:textSize="@dimen/_10font_mdp" />
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/dashboardPageFlow"
+        app:constraint_referenced_ids="dashboardPage_armLay,dashboardPage_weightLay,
+        dashboardPage_runLay,dashboardPage_yogaLay"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="aligned"
+        app:flow_verticalGap="@dimen/_3mdp"
+        app:flow_horizontalGap="@dimen/_3mdp"
+        app:layout_constraintStart_toStartOf="@id/dashboardPageGuideBegin"
+        app:layout_constraintEnd_toEndOf="@id/dashboardPageGuideEnd"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:layout_marginTop="@dimen/_10mdp"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:text="courses collections"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20font_mdp"
+        android:textStyle="bold"
+        android:fontFamily="@font/actor"
+        app:layout_constraintStart_toStartOf="@id/dashboardPageGuideBegin"
+        app:layout_constraintTop_toBottomOf="@+id/dashboardPageFlow" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_course_title"
+        app:layout_constraintStart_toStartOf="@id/dashboardPageGuideBegin"
+        app:layout_constraintEnd_toEndOf="@id/dashboardPageGuideEnd"
+        android:layout_marginTop="@dimen/_10mdp"
+        app:neumorph_shadowElevation="@dimen/_5mdp"
+        app:neumorph_shadowColorDark="@color/shadow_dark"
+        app:neumorph_shadowColorLight="@color/shadow_light"
+        app:neumorph_shapeAppearance="@style/NeumorphismCard"
+        app:neumorph_backgroundColor="@color/background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/dashboardPage_coursesImg"
+                android:layout_width="@dimen/_60mdp"
+                android:layout_height="@dimen/_60mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/_8mdp"
+                android:src="@drawable/fitness"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="@dimen/_8mdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="Courses | Attended"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14font_mdp"
+                app:layout_constraintStart_toEndOf="@+id/dashboardPage_coursesImg"
+                app:layout_constraintTop_toTopOf="@id/dashboardPage_coursesImg"
+                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8mdp"
+                android:layout_marginBottom="@dimen/_10mdp"
+                android:fontFamily="@font/actor"
+                android:text="courses in media"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10font_mdp"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboardPage_coursesImg"
+                app:layout_constraintStart_toEndOf="@id/dashboardPage_coursesImg" />
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="@dimen/_42mdp"
+                android:layout_height="@dimen/_42mdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/_8mdp"
+                app:neumorph_shapeType="basin"
+                app:neumorph_backgroundColor="@color/background"
+                app:neumorph_shadowColorDark="@color/shadow_dark"
+                app:neumorph_shadowColorLight="@color/shadow_light"
+                app:neumorph_shadowElevation="@dimen/_3mdp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/right"
+                        android:padding="@dimen/_7mdp"
+                        app:tint="@color/primary"/>
+
+            </soup.neumorphism.NeumorphCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </soup.neumorphism.NeumorphCardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_8mdp"
+        android:background="@drawable/shadow_light"
+        app:layout_constraintBottom_toTopOf="@id/dashboardPage_bottomLay"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboardPage_bottomLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/dashboardPage_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_shapeType="pressed"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shadowElevation="@dimen/_5mdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            tools:ignore="missingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/_30mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_margin="@dimen/_8mdp"
+                android:src="@drawable/home"
+                app:tint="@color/primary"/>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/dashboardPage_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shadowElevation="@dimen/_5mdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            tools:ignore="missingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/_30mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_margin="@dimen/_8mdp"
+                android:src="@drawable/chart"
+                app:tint="@color/black"/>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/dashboardPage_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shadowElevation="@dimen/_5mdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            tools:ignore="missingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/_30mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_margin="@dimen/_8mdp"
+                android:src="@drawable/bell"
+                app:tint="@color/black"/>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/dashboardPage_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:neumorph_backgroundColor="@color/background"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shadowElevation="@dimen/_5mdp"
+            app:neumorph_shapeAppearance="@style/NeumorphismCard"
+            tools:ignore="missingConstraints">
+
+            <ImageView
+                android:layout_width="@dimen/_30mdp"
+                android:layout_height="@dimen/_30mdp"
+                android:padding="@dimen/_3mdp"
+                android:layout_margin="@dimen/_8mdp"
+                android:src="@drawable/user"
+                app:tint="@color/black"/>
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:constraint_referenced_ids="dashboardPage_home,dashboardPage_chart,dashboardPage_bell,dashboardPage_user "/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
