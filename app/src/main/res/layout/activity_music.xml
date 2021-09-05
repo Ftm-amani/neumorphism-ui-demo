@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/musicBackground"
+        tools:context=".MusicActivity">
+
+
+        <soup.neumorphism.NeumorphImageView
+            android:layout_width="@dimen/_42mdp"
+            android:layout_height="@dimen/_42mdp"
+            tools:ignore="missingConstraints"
+            android:id="@+id/btn_music_shuffle"
+            android:src="@drawable/ic_shuffle"
+            android:padding="@dimen/_13mdp"
+            android:tint="@color/musicPrimary"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shapeAppearance="@style/NeumorphismImageSmall" />
+
+        <soup.neumorphism.NeumorphImageView
+            android:layout_width="@dimen/_54mdp"
+            android:layout_height="@dimen/_54mdp"
+            tools:ignore="missingConstraints"
+            android:id="@+id/btn_music_previous"
+            android:src="@drawable/ic_previous"
+            android:padding="@dimen/_15mdp"
+            android:tint="@color/musicPrimary"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shapeAppearance="@style/NeumorphismImageNormal" />
+
+        <soup.neumorphism.NeumorphImageView
+            android:layout_width="@dimen/_64mdp"
+            android:layout_height="@dimen/_64mdp"
+            tools:ignore="missingConstraints"
+            android:id="@+id/btn_music_pause"
+            app:neumorph_shapeType="basin"
+            android:src="@drawable/ic_pause"
+            android:padding="@dimen/_18mdp"
+            android:tint="@color/musicPrimary"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shapeAppearance="@style/NeumorphismImageLarge" />
+
+        <soup.neumorphism.NeumorphImageView
+            android:layout_width="@dimen/_54mdp"
+            android:layout_height="@dimen/_54mdp"
+            tools:ignore="missingConstraints"
+            android:id="@+id/btn_music_next"
+            android:src="@drawable/ic_next"
+            android:padding="@dimen/_15mdp"
+            android:tint="@color/musicPrimary"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shapeAppearance="@style/NeumorphismImageNormal" />
+
+        <soup.neumorphism.NeumorphImageView
+            android:layout_width="@dimen/_42mdp"
+            android:layout_height="@dimen/_42mdp"
+            tools:ignore="missingConstraints"
+            android:id="@+id/btn_music_loop"
+            android:src="@drawable/ic_loop"
+            android:padding="@dimen/_13mdp"
+            android:tint="@color/musicPrimary"
+            app:neumorph_shadowColorLight="@color/shadow_light"
+            app:neumorph_shadowColorDark="@color/shadow_dark"
+            app:neumorph_shapeAppearance="@style/NeumorphismImageSmall" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:flow_maxElementsWrap="5"
+            android:layout_marginBottom="@dimen/_25mdp"
+            app:constraint_referenced_ids="btn_music_shuffle,btn_music_previous,btn_music_pause,btn_music_next,btn_music_loop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <soup.neumorphism.NeumorphImageView
+                android:id="@+id/btn_menu"
+                android:layout_width="@dimen/_48mdp"
+                android:layout_height="@dimen/_48mdp"
+                android:layout_margin="@dimen/_10mdp"
+                android:padding="@dimen/_15mdp"
+                android:src="@drawable/ic_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeAppearance="@style/NeumorphismImageOther"
+                app:tint="@color/musicSecondary_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Now Playing"
+                android:textColor="@color/musicSecondary_text"
+                android:textSize="@dimen/_16font_mdp"
+                app:layout_constraintBottom_toBottomOf="@id/btn_menu"
+                app:layout_constraintEnd_toStartOf="@id/btn_search"
+                app:layout_constraintStart_toEndOf="@id/btn_menu"
+                app:layout_constraintTop_toTopOf="@id/btn_menu" />
+
+            <soup.neumorphism.NeumorphImageView
+                android:id="@+id/btn_search"
+                android:layout_width="@dimen/_48mdp"
+                android:layout_height="@dimen/_48mdp"
+                android:layout_margin="@dimen/_10mdp"
+                android:padding="@dimen/_15mdp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:neumorph_shapeAppearance="@style/NeumorphismImageOther"
+                app:tint="@color/musicSecondary_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/progress_music"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12mdp"
+            android:layout_marginEnd="@dimen/_12mdp"
+            android:layout_marginBottom="@dimen/_15mdp"
+            app:neumorph_shadowColorDark="@color/musicShadow_dark"
+            app:neumorph_shadowColorLight="@color/musicShadow_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/flow_buttons">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_6mdp"
+                android:thumbTint="@android:color/transparent"
+                android:progress="54"
+                android:layout_margin="@dimen/_2mdp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:progressDrawable="@drawable/bg_music_progress" />
+
+        </soup.neumorphism.NeumorphCardView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_info"
+            app:layout_constraintBottom_toTopOf="@id/progress_music"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="@dimen/_12mdp"
+            android:layout_marginStart="@dimen/_12mdp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2:34"
+                android:textSize="@dimen/_10font_mdp"
+                android:textColor="@color/musicPrimary_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_end_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5mdp"
+                android:text="4:42"
+                android:textSize="@dimen/_10font_mdp"
+                android:textColor="@color/musicPrimary_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_song_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Come Undone"
+                android:layout_marginBottom="@dimen/_25mdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/tv_start_time"
+                android:textSize="@dimen/_18font_mdp"
+                android:textColor="@color/musicPrimary" />
+
+            <TextView
+                android:id="@+id/tv_song_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15mdp"
+                android:layout_marginTop="@dimen/_15mdp"
+                android:text="Duran Duran"
+                android:textColor="@color/musicPrimary_text"
+                android:textSize="@dimen/_24font_mdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tv_song_artist"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_width="@dimen/_230mdp"
+            android:layout_height="@dimen/_230mdp"
+            android:layout_margin="@dimen/_10mdp"
+            app:neumorph_shadowColorLight="@color/musicShadow_light"
+            app:neumorph_shadowColorDark="@color/musicShadow_dark"
+            app:neumorph_shapeAppearance="@style/NeumorphismImageCard"
+            app:layout_constraintBottom_toTopOf="@+id/cl_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <ImageView
+                android:id="@+id/img_music_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/music_cover_img"
+                android:scaleType="centerCrop"
+                android:layout_margin="@dimen/_2mdp" />
+        </soup.neumorphism.NeumorphCardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

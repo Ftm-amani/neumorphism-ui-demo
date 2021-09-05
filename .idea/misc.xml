@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/FTM/AndroidStudioProjects/neumorphism/app/src/main/res/drawable/bg_music_progress.xml" value="0.2203125" />
         <entry key="..\:/Users/FTM/AndroidStudioProjects/neumorphism/app/src/main/res/drawable/shadow_light.xml" value="0.2203125" />
         <entry key="..\:/Users/FTM/AndroidStudioProjects/neumorphism/app/src/main/res/font/.xml" value="0.1814814814814815" />
         <entry key="..\:/Users/FTM/AndroidStudioProjects/neumorphism/app/src/main/res/layout/activity_main.xml" value="0.2558714462299135" />
+        <entry key="..\:/Users/FTM/AndroidStudioProjects/neumorphism/app/src/main/res/layout/activity_music.xml" value="0.22" />
       </map>
     </option>
   </component>
